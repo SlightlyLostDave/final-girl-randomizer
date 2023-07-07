@@ -11,6 +11,8 @@ import {
 } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 
+import FilmsList from '../FilmsList/FilmsList';
+
 export function Settings() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef(null);
@@ -32,7 +34,9 @@ export function Settings() {
           <DrawerHeader>Settings</DrawerHeader>
 
           <DrawerBody>
-            
+            <form>
+              <FilmsList></FilmsList>
+            </form>
           </DrawerBody>
 
           <DrawerFooter>
